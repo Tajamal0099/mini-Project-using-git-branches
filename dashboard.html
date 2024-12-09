@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+    </head>
+    <body class="bg-[#e3e3ef] p-4 font-sans">
+        <div
+            class="max-w-screen-xl mx-auto bg-[#f8f9fb] rounded-2xl shadow-lg p-6 flex">
+
+            <!-- Side Menu Bar -->
+
+            
+            <!-- Main Content -->
+            <div class="w-[65%] ">
+                <header class="p-6">
+                    <h1 class="text-2xl text-[#110b3e] font-bold">Good morning,
+                        James!</h1>
+                </header>
+
+                <main class="p-6 grid grid-cols-12 gap-6">
+                    <!-- Stats Cards -->
+                    <section class="col-span-12 grid grid-cols-4 gap-4">
+                        <!-- Box 1 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-4 w-full flex items-center gap-4">
+                            <div
+                                class="bg-indigo-600 text-white p-2 pl-[14px] pr-[14px] rounded-full">
+                                <i class="fas fa-dollar-sign text-md"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Today's
+                                    Sales</p>
+                                <h2 class="text-2xl font-bold">$4,320</h2>
+                            </div>
+                        </div>
+
+                        <!-- Box 2 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-4 h-28 w-full flex items-center gap-4">
+                            <div
+                                class="bg-green-600 text-white p-2 pl-[10px] pr-[10px] rounded-full">
+                                <i class="fas fa-user-plus text-md"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">New
+                                    Customers</p>
+                                <h2 class="text-2xl font-bold">142</h2>
+                            </div>
+                        </div>
+
+                        <!-- Box 3 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-3 h-28 w-full flex items-center gap-4">
+                            <div
+                                class="bg-blue-600 text-white p-2 pl-[13px] pr-[13px] rounded-full">
+                                <i class="fas fa-box text-md"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Orders
+                                    Processed</p>
+                                <h2 class="text-2xl font-bold">320</h2>
+                            </div>
+                        </div>
+
+                        <!-- Box 4 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-3 h-28 w-full flex items-center gap-4">
+                            <div
+                                class="bg-yellow-600 text-white p-2 pl-[10px] pr-[13px] rounded-full">
+                                <i class="fas fa-chart-line text-md"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Revenue</p>
+                                <h2 class="text-2xl font-bold">$18,470</h2>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Revenue Chart -->
+                    <section class="col-span-12  flex gap-4 ">
+                        <div class="w-[30%] flex flex-col gap-4">
+                            <div class="bg-white shadow-md rounded-xl p-4">
+                                <p class="text-sm text-gray-500">Today's
+                                    Sales</p>
+                                <h2 class="text-3xl font-bold">$4,320</h2>
+                            </div>
+                            <div class="bg-white shadow-md rounded-xl p-4">
+                                <p class="text-sm text-gray-500">New
+                                    Customers</p>
+                                <h2 class="text-3xl font-bold">142</h2>
+                            </div>
+                            <div class="bg-white shadow-md rounded-xl p-4">
+                                <p class="text-sm text-gray-500">New Stock</p>
+                                <h2 class="text-3xl font-bold">162</h2>
+                            </div>
+                            <div class="bg-white shadow-md rounded-xl p-4">
+                                <p class="text-sm text-gray-500">New
+                                    Preferences</p>
+                                <h2 class="text-3xl font-bold">72</h2>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-md w-[70%] rounded-xl p-4">
+                            <h3 class="font-bold text-lg">Revenue Chart</h3>
+                            <div id="chart" class="mt-4"></div>
+                        </div>
+                    </section>
+                    <section class="col-span-12 mt-6 grid grid-cols-3 gap-4">
+                        <!-- Email Box 1 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+                            <div>
+                                <h4
+                                    class="text-lg font-semibold text-gray-700">John
+                                    Doe</h4>
+                                <p class="text-sm text-gray-500 truncate">Hey, I
+                                    wanted to check if you received...</p>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 mt-4 text-sm text-gray-500">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                                <span>10:45 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Email Box 2 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+                            <div>
+                                <h4
+                                    class="text-lg font-semibold text-gray-700">Jane
+                                    Smith</h4>
+                                <p class="text-sm text-gray-500 truncate">Can
+                                    you confirm the meeting for tomorrow...</p>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 mt-4 text-sm text-gray-500">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                                <span>09:30 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Email Box 3 -->
+                        <div
+                            class="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+                            <div>
+                                <h4
+                                    class="text-lg font-semibold text-gray-700">Michael
+                                    Brown</h4>
+                                <p class="text-sm text-gray-500 truncate">Thanks
+                                    for the update! Looking forward to...</p>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 mt-4 text-sm text-gray-500">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                                <span>08:15 AM</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
+
+            <!-- Right Sidebar -->
+          
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
