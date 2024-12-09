@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup Page</title>
+        <!-- TailwindCSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome for Icons (optional) -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+    </head>
+
+    <body class=" h-screen pl-20 pr-20 flex items-center justify-center">
+
+        <div
+            class="flex flex-col h-screen p-10 lg:flex-row w-full max-w-7xl bg-white rounded-lg overflow-hidden">
+
+            <!-- Left side with image -->
+            <div
+                class="lg:w-1/2 w-full rounded-[70px] overflow-hidden  bg-gradient-to-br from-[#ff7b21] to-[#fe893c] relative flex justify-center text-white p-10 pt-10">
+                <div class="text-center space-y-4">
+                    <div class="text-5xl font-semibold mb-4 text-start">Simplify <br> management
+                        with our dashboard</div>
+                    <div class="text-lg font-bold text-[#f6edc6] text-start mb-4">Simplify
+                        your e-commerce management with our user-friendly admin
+                        dashboard. </div>
+                    <img src="./assets/icon.png" alt="Signup Image"
+                        class=" object-cover rounded-md transition-all hover:scale-105 absolute">
+                </div>
+            </div>
+
+            <!-- Right side with form -->
+            <div
+                class="w-full lg:w-1/2 p-8 flex flex-col justify-center space-y-6 items-center" id="signup-page">
+
+                <div class="flex justify-center items-center space-x-2">
+                        <i class="fas fa-user-circle text-4xl text-orange-500"></i>
+                    <h1 class="text-3xl font-bold text-[#08090a]">E Spurt</h1>
+                </div>
+
+                <h2 class="text-4xl font-bold text-gray-900">Create a new account
+                    <h3 class="font-semibold text-gray-400 relative bottom-4">Please create your account</h3>
+                </h2>
+
+                <form id="signupForm" class="space-y-5 w-full max-w-sm">
+                    <div>
+                        <input type="email" id="signupEmail"
+                            placeholder="Email address" required
+                            class="w-full p-4 border bg-[#f5f7f9] rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all hover:border-orange-500">
+                    </div>
+                    <div>
+                        <input type="password" id="signupPassword"
+                            placeholder="Password" required
+                            class="w-full p-4 border bg-[#f5f7f9] rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all hover:border-orange-500">
+                    </div>
+                    <!-- Signup Button -->
+                    <div class="w-full">
+                        <button type="submit"
+                            class="w-full p-4 font-semibold bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-all duration-300 transform">Signup</button>
+                    </div>
+                </form>
+
+                <p class="text-center text-gray-500">Already have an account? <a
+                        href="javascript:void(0);" onclick="showLoginPage()"
+                        class="text-orange-500 hover:text-orange-600">Login</a></p>
+            </div>
+            <!-- Right side with form -->
+            <div
+                class="w-full lg:w-1/2 p-8 flex flex-col hidden justify-center space-y-6 items-center" id="login-page">
+                <div class="flex justify-center items-center space-x-2">
+                    <i class="fas fa-user-circle text-4xl text-orange-500"></i>
+                    <h1 class="text-3xl font-bold text-gray-900">E Spurt</h1>
+                </div>
+
+                <h2 class="text-4xl font-bold text-gray-900">Welcome back</h2>
+                <p class="text-gray-500 relative bottom-4">Please login to your account</p>
+
+                <form id="loginForm" class="space-y-5 w-full max-w-sm">
+                    <input type="email" id="email" placeholder="Email address"
+                        required
+                        class="w-full p-4 border bg-[#f5f7f9] rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all hover:border-orange-500">
+                    <input type="password" id="password" placeholder="Password"
+                        required
+                        class="w-full p-4 border bg-[#f5f7f9] rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all hover:border-orange-500">
+                    <button type="submit"
+                        class="w-full p-4 font-semibold bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-all duration-300 transform ">Login</button>
+                </form>
+
+                <p class="text-center text-gray-500">Don't have an account? <a
+                        href="javascript:void(0);"
+                        onclick="showSignupPage()"
+                        class="text-orange-500 hover:text-orange-600">Signup</a></p>
+            </div>
+
+        </div>
+        <script src="./signup-login.js"></script>
+    </body>
+
 </html>
