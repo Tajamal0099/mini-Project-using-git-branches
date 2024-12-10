@@ -33,12 +33,12 @@
                     <div class="flex gap-2">
                         <button 
                             class="edit-todo bg-blue-500 text-white px-2 py-1 rounded-lg text-sm"
-                            onclick="editTodo(${index})">
+                            data-index="${index}">
                             Edit
                         </button>
                         <button 
                             class="delete-todo bg-red-500 text-white px-2 py-1 rounded-lg text-sm"
-                            onclick="deleteTodo(${index})">
+                            data-index="${index}">
                             Delete
                         </button>
                     </div>
@@ -46,7 +46,23 @@
             `
             )
             .join("");
+    
+        // Attach event listeners to the new buttons
+        document.querySelectorAll(".edit-todo").forEach((button) => {
+            button.addEventListener("click", () => {
+                const index = button.dataset.index;
+                editTodo(index);
+            });
+        });
+    
+        document.querySelectorAll(".delete-todo").forEach((button) => {
+            button.addEventListener("click", () => {
+                const index = button.dataset.index;
+                deleteTodo(index);
+            });
+        });
     };
+    
     
     // Add a new task
     const addTodo = () => {
